@@ -1,0 +1,37 @@
+html {
+    background-color: black;
+}
+
+body {
+    background: url("img/twinkling-stars-in-the-night-sky-loop_rpkmj9ea_thumbnail-full01.png") center/cover no-repeat border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: block;
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+
+.header p {
+    margin: 0;
+}
+.current-day {
+
+}
+
+.temp-menu {
+    padding-top: 200px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
