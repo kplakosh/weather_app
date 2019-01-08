@@ -1,37 +1,132 @@
+/* white: #fcfcfa; */
+/* gray: #ced0d6; */
+/* darkgray: #7d8291; */
+
 html {
     background-color: black;
 }
 
 body {
     background: url("img/twinkling-stars-in-the-night-sky-loop_rpkmj9ea_thumbnail-full01.png") center/cover no-repeat border-box;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    color: #ced0d6;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+#sf {
+    font-size: 13px;
+}
+
+#sfc {
+    font-size: 13px
+}
+
+.pad {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.divider {
+    border-bottom: 1px solid #8b929e;
+}
+
+.block-width {
+    width: calc(100% - 40px);
+}
+
+ /* HEADER */
 .header {
-    display: block;
-    height: 200px;
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    height: 300px;
     width: 100%;
     margin: 0;
-    position: fixed;
     top: 0;
+    color: #fcfcfa;
     text-align: center;
 }
 
 .header p {
     margin: 0;
 }
+
+.city-name {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-top: 90px;
+    margin-bottom: 0;
+}
+
+.sky-description {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: #ced0d6;
+}
+
+.current-temp {
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+/* CURRENT DAY WEATHER */
 .current-day {
+    display: inline-flex;
+    margin: 300px 0 0 0;  
+}
+
+.week-day {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-self: end;
+    /* justify-content: space-between; */
+}
+
+.temp {
+    display: inline-flex;
+    flex-flow: row;
+    right: 0;
+}
+
+/* .temp-max {
+    right: 25px;
+} */
+
+.temp-min {
+    position: relative;
+    right: 0;
+    color: #7d8291;
+}
+
+/* CLOUDS IMG */
+/* img https://metrouk2.files.wordpress.com/2018/02/ios_weather_icons-e1519660727179.png?quality=90&strip=all&zoom=1&resize=644%2C483 */
+
+
+/* CURRENT DAY 3HR FORECAST SCROLL */
+.temp-scroll {
+    display: flex;
+    position: inherit;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.card {
+    padding: 0 10px 0 0;
+}
+
+/* NEXT WEEK WEATHER */
+/* .main {
+    
+} */
+
+.day-card {
+    display: flex;
+    flex-flow: row;
 
 }
 
-.temp-menu {
-    padding-top: 200px;
-}
-
+/* FOOTER MENU */
 .footer {
-    position: fixed;
     bottom: 0;
 }
