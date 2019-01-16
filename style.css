@@ -4,16 +4,25 @@
 
 html {
     background-color: #2c3347;
+    width: 375px;
+    align-content: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: calc(50% - 187px);
+    margin-right: calc(50% - 187px);
+    padding: 0;
+
 }
 
 body {
     /* background: url("img/twinkling-stars-in-the-night-sky-loop_rpkmj9ea_thumbnail-full01.png") center/cover no-repeat border-box; */
+    display: flex;
+    flex-flow: column;
     background: #2c3347;
     color: #ced0d6;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;
-}
+    padding: 0; }
 
 p { 
     margin: 0;
@@ -43,15 +52,20 @@ p {
  /* HEADER */
 .header {
     display: flex;
+    position: relative;
     flex-flow: column;
     position: fixed;
     height: 300px;
-    width: 100%;
+    width: 375px;
     top: 0;
     color: #fcfcfa;
     text-align: center;
     background: #2c3347;
 }
+
+/* .header-short {
+    height: 100px;
+} */
 
 .city-name {
     font-weight: 300;
@@ -75,6 +89,7 @@ p {
 /* CURRENT DAY WEATHER */
 .current-day {
     display: inline-flex;
+    /* position: inherit; */
     margin-top: 300px;  
     justify-content: space-between;
 }
@@ -147,6 +162,7 @@ p {
 
 /* NEXT WEEK WEATHER */
 .main {
+    position: inherit;
     overflow: hidden;
     padding-top: 8px;
 }
@@ -180,6 +196,7 @@ p {
 .bt {
     /* bigger text */
     font-size: 20px;
+    line-height: 22px;
 }
 
 /* FOOTER MENU */
