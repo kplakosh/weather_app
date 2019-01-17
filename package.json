@@ -4,7 +4,9 @@
   "description": "clone of IOS weather application ",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   "homepage": "https://github.com/kplakosh/weather_app#readme",
   "devDependencies": {
     "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {}
 }

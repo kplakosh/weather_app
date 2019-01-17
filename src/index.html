@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/img.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="city-name">Dublin</h1>
+        <p class="sky-description">Mostly clear</p>
+        <p class="temperature current-temp">43°</p>
+    </div>
+    <!-- CURRENT DAY WEATHER -->
+    <div class="current-day pad block-width divider">
+        <p class="week-day-name">Friday <span id="sfc">TODAY</span></p>
+        <div class="temp">
+            <p class="temp-max">57</p>
+            <p class="temp-min">39</p>
+        </div>
+    </div>
+    <!-- CURRENT DAY 3HR FORECAST SCROLL -->
+    <div class="temp-scroll pad divider">
+        <div class="card">
+            <p class="time">Now</p>
+            <img class="image" id="i1" src="" alt="">
+            <p class="temperature">43°</p>
+        </div>
+        <div class="card">
+            <p class="time">9<span id="sf">PM</span></p>
+            <img class="image" id="i5" src="" alt="">
+            <p class="temperature">43°</p>
+        </div>
+        <div class="card">
+            <p class="time">12<span id="sf">AM</span></p>
+            <img class="image" id="i5" src="" alt="">
+            <p class="temperature">42°</p>
+        </div>
+        <div class="card">
+            <p class="time">3<span id="sf">AM</span></p>
+            <img class="image" id="i3" src="" alt="">
+            <p class="temperature">42°</p>
+        </div>
+        <div class="card">
+            <p class="time">6<span id="sf">AM</span></p>
+            <img class="image" id="i3" src="" alt="">
+            <p class="temperature">42°</p>
+        </div>
+        <div class="card">
+            <p class="time i5">9<span id="sf">AM</span></p>
+            <img class="image" id="i3" src="" alt="">
+            <p class="temperature">42°</p>
+        </div>
+        <div class="card">
+            <p class="time">12<span id="sf">PM</span></p>
+            <img class="image" id="i3" src="" alt="">
+            <p class="temperature">52°</p>
+        </div>
+        <div class="card">
+            <p class="time">3<span id="sf">PM</span></p>
+            <img class="image" id="i3" src="" alt="">
+            <p class="temperature">54°</p>
+        </div>
+    </div>
+    <!-- NEXT WEEK WEATHER -->
+    <div class="main pad block-width divider">
+        <div class="day-card week-day">
+            <p class="week-day-name">Saturday</p>
+            <img class="day-image" id="i8" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">55</p>
+                <p class="temp-min">44</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Sunday</p>
+            <img class="day-image" id="i8" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">53</p>
+                <p class="temp-min">40</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Monday</p>
+            <img class="day-image" id="i8" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">61</p>
+                <p class="temp-min">50</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Tuesday</p>
+            <img class="day-image" id="i8" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">61</p>
+                <p class="temp-min">51</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Wednesday</p>
+            <img class="day-image" id="i8" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">59</p>
+                <p class="temp-min">45</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Thursday</p>
+            <img class="day-image" id="i1" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">59</p>
+                <p class="temp-min">42</p>
+            </div>
+        </div>
+        <div class="day-card week-day">
+            <p class="week-day-name">Friday</p>
+            <img class="day-image" id="i3" src="" alt="">
+            <div class="temp">
+                <p class="temp-max">60</p>
+                <p class="temp-min">44</p>
+            </div>
+        </div>
+    </div>
+    <div class="pad block-width divider">
+        <p id="day-description-text">Today: Mostly clear currently. it's 41°; the high today was forecast as 58°.</p>
+    </div>
+    <!-- CURRENT DAY DETAILED DESCRIPTION -->
+    <div class="day-description pad block-width divider">
+        <div class="sun desc-block divider">
+            <div class="sunrise db-h">
+                <p class="st">SUNRISE</p>
+                <p class="bt">7:22AM</p>
+            </div>
+            <div class="sunset db-h">
+                <p class="st">SUNSET</p>
+                <p class="bt">5:01PM</p>
+            </div>
+        </div>
+        <div class="chanse-of-rain desc-block divider">
+            <div class="rain db-h">
+                <p class="st">CHANCE OF RAIN</p>
+                <p class="bt">30%</p>
+            </div>
+            <div class="humidity db-h">
+                <p class="st">HUMIDITY</p>
+                <p class="bt">75%</p>
+            </div>
+        </div>
+        <div class="windiness desc-block divider">
+            <div class="wind db-h">
+                <p class="st">WIND</p>
+                <p class="bt">ENE 0 mph</p>
+            </div>
+            <div class="feels-like db-h">
+                <p class="st">FEELS LIKE</p>
+                <p class="bt">43°</p>
+            </div>
+        </div>
+        <div class="prec-pres desc-block divider">
+            <div class="precipitation db-h">
+                <p class="st">PRECIPITATION</p>
+                <p class="bt">0 in</p>
+            </div>
+            <div class="pressure db-h">
+                <p class="st">PRESSURE</p>
+                <p class="bt">29.9 inHg</p>
+            </div>
+        </div>
+        <div class="visib-uv desc-block divider">
+            <div class="visibility db-h">
+                <p class="st">VISIBILITY</p>
+                <p class="bt">6 mi</p>
+            </div>
+            <div class="uv-index db-h">
+                <p class="st">UV INDEX</p>
+                <p class="bt">0</p>
+            </div>
+        </div>
+        <div class="air-quality desc-block">
+            <div class="quality-index db-h">
+                <p class="st">AIR QUALITY INDEX</p>
+                <p class="bt">63</p>
+            </div>
+            <div class="quality db-h">
+                <p class="st">AIR QUALITY</p>
+                <p class="bt">Moderate</p>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER MENU -->
+    <div class="footer pad block-width">
+        <!-- <img src="#" alt="The Weather Chanel">
+        <img src="#" alt="scroll"> -->
+        <ul>
+            <li>---</li>
+            <li>---</li>
+            <li>---</li>
+        </ul>
+    </div>
+</body>
+
+</html>
