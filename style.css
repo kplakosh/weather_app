@@ -5,7 +5,6 @@
 html {
     background-color: #2c3347;
     width: 375px;
-    align-content: middle;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: calc(50% - 187px);
@@ -63,9 +62,9 @@ p {
     background: #2c3347;
 }
 
-/* .header-short {
+.header-short {
     height: 100px;
-} */
+}
 
 .city-name {
     font-weight: 300;

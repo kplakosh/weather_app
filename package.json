@@ -1,0 +1,24 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "clone of IOS weather application ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kplakosh/weather_app.git"
+  },
+  "author": "Kateryna Plakosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kplakosh/weather_app/issues"
+  },
+  "homepage": "https://github.com/kplakosh/weather_app#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {}
+}
