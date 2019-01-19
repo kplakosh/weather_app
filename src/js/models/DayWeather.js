@@ -1,3 +1,5 @@
+import CityWeather from 'CityWeather'
+
 export default class DayWeather {
     constructor(date, description, img_description, temp_min, temp_max) {
         this.date = date;

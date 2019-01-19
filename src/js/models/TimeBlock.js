@@ -1,3 +1,5 @@
+import CityWeather from 'CityWeather';
+
 export default class TimeBlock {
     constructor(day_time, rain_percentage, img_description, temp) {
         this.day_time = day_time;

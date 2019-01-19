@@ -1,5 +1,5 @@
 // import { key, proxy } from '../config';
-import DayWeather from 'DayWeather';
+import CityWeather from 'CityWeather';
 
 export default class CurrentWeather {
     constructor(dayWeather, description_txt, sunrise, sunset, chance_of_rain, humidity, wind, feels_like, precipitation, pressure, visibility, uv_index, air_quality_index, air_quality) {
@@ -20,4 +20,10 @@ export default class CurrentWeather {
         this.air_quality_index = air_quality_index;
         this.air_quality = air_quality;
     }
+
+    transferTempToF(temp) {
+        return 1.8 * (temp - 273) + 32;  
+    }
+    // this.weatherList["0"].main.temp_max - 273, 15) * 9 / 5 + 32
+   
 }
