@@ -20,10 +20,12 @@ export default class CurrentWeather {
         this.air_quality = air_quality;
     }
 
+    // Calculate temperature from K(default) to F
     transferTempToF(temp) {
         return Math.round(1.8 * (temp - 273) + 32);  
     }   
 
+    // Translate direction of wind from degree to compass value
     windDirectionToTxt(windDegree) {
         if (windDegree > 348.75 && windDegree <= 360 && windDegree > 0 && windDegree <= 11.25) {
             return 'N';

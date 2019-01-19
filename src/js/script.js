@@ -46,22 +46,16 @@ var weatherController = (async function() {
 
     // 3. Create weather time-blocks array for next 24 hours
     state.nextTwentyFourHoursWeather = [];
-
-    let dateTimeNow = new Date().getHours(); // Get current date to find out what time of day now
-
     for (let i = 0; i < 8; i++) {
-        state.nextTwentyFourHoursWeather.push({
-            time: state.city.weatherList[i].dt_txt.slice(11, 13),
-            chanceOfRain: state.city.weatherList[i].rain,
-            img_description: state.city.weatherList[i].weather[0].icon,
-            temp: state.city.weatherList[i].main.temp
-        });
+        state.nextTwentyFourHoursWeather.push(new TimeBlock (
+            state.city.weatherList[i].dt_txt.slice(11, 13),
+            state.city.weatherList[i].rain,
+            state.city.weatherList[i].weather[0].icon,
+            state.city.weatherList[i].main.temp));
     }
-    
-
-
 
     // 4. Create 5 days weather forecast 
+    
 
 })();
 

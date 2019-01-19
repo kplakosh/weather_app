@@ -15,10 +15,8 @@ export default class CityWeather {
 
             this.name = res.data.city.name;  // City name
             this.weatherList = res.data.list;  // Get list of weather for every 3 hours for next 5 days
-            // this.currentDate = re.data.
             this.coordinates = res.data.city.coord;
-
-            console.log(res);
+            // console.log(res);
             
         } catch (error) {
             alert('Something went wrong');
@@ -43,7 +41,6 @@ export default class CityWeather {
         try {
             const res = await axios(`${proxy}http://api.openweathermap.org/pollution/v1/co/${this.coordinates.lat},${this.coordinates.lon}/${this.currentDate}.json?appid=${key}`);
 
-            console.log(res);
             // console.log(res);
         } catch (error) {
             alert('Can not Access Carbon Monoxide index');
