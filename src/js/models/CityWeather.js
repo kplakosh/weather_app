@@ -15,12 +15,11 @@ export default class CityWeather {
 
             this.name = res.data.city.name;  // City name
             this.weatherList = res.data.list;  // Get list of weather for every 3 hours for next 5 days
-            // this.currentDate = res.data.list[0].dt_txt;
+            // this.currentDate = re.data.
             this.coordinates = res.data.city.coord;
-            
-            // console.log(this.coordinates.lon.toFixed(2));
 
-            // console.log(this.coordinates);
+            console.log(res);
+            
         } catch (error) {
             alert('Something went wrong');
             console.log(error);

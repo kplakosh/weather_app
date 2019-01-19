@@ -1,6 +1,7 @@
 // Global app controller
 import CityWeather from './models/CityWeather';
 import CurrentWeather from './models/CurrentWeather';
+import TimeBlock from './models/TimeBlock';
 
 /** Global state of the app
  * - Search object
@@ -26,7 +27,7 @@ var weatherController = (async function() {
     let img_description = currentWeatherList.weather[0].icon;
     let sunrise = '';
     let sunset = '';
-    let chance_of_rain = currentWeatherList.rain;
+    let chanceOfRain = currentWeatherList.rain;
     let humidity = currentWeatherList.main.humidity;
     let wind_degree = currentWeatherList.wind.deg;
     let wind_speed = currentWeatherList.wind.speed;
@@ -41,9 +42,24 @@ var weatherController = (async function() {
     let air_quality = 'N/A';
 
     // 2. Create current weather object
-    state.currentWeather = new CurrentWeather(cityName, dayWeather, description_txt, img_description, sunrise, sunset, chance_of_rain, humidity, wind_degree, wind_speed, feels_like, temp_max, temp_min, precipitation, pressure, visibility, uvIndex, air_quality_index, air_quality);
+    state.currentWeather = new CurrentWeather(cityName, dayWeather, description_txt, img_description, sunrise, sunset, chanceOfRain, humidity, wind_degree, wind_speed, feels_like, temp_max, temp_min, precipitation, pressure, visibility, uvIndex, air_quality_index, air_quality);
 
-    // 3. Create weather time block
+    // 3. Create weather time-blocks array for next 24 hours
+    state.nextTwentyFourHoursWeather = [];
+
+    let dateTimeNow = new Date().getHours(); // Get current date to find out what time of day now
+
+    for (let i = 0; i < 8; i++) {
+        state.nextTwentyFourHoursWeather.push({
+            time: state.city.weatherList[i].dt_txt.slice(11, 13),
+            chanceOfRain: state.city.weatherList[i].rain,
+            img_description: state.city.weatherList[i].weather[0].icon,
+            temp: state.city.weatherList[i].main.temp
+        });
+    }
+    
+
+
 
     // 4. Create 5 days weather forecast 
 
@@ -96,3 +112,5 @@ const controller = (function (weathCtrl, UICtrl) {
 
     
 })(weatherController, currentWeatherController, timeBlockController, fiveDayWeatherForecastController, UIcontroller);
+
+
